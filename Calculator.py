@@ -6,12 +6,14 @@ math_operation = ""
 answer = 0
 
 
+# function to display coresponding value of button clicked
 def button_click(value):
     global math_operation
     math_operation = math_operation + value
     text_element.set(math_operation)
 
 
+# function to clear the text entry boxes    
 def clear():
     text_element.set("")
     out_.set("")
@@ -20,6 +22,7 @@ def clear():
     answer = ""
 
 
+ # functon to calculate the results and display in answer_field   
 def equal():
     try:
         global math_operation
@@ -33,12 +36,14 @@ def equal():
         math_operation = ""
 
 
+# function to find the square root         
 def square_rt():
     global math_operation
     answer_ = sqrt(int(math_operation))
     out_.set(str(answer_))
 
 
+# function to find the percentage     
 def percentage():
     global answer
     global math_operation
@@ -51,6 +56,7 @@ def percentage():
         text_element.set(str(per))
 
 
+ # function to remove the last inserted value
 def back_space():
     global math_operation
     out_.set("")
